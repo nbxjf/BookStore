@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+   <package name="BookStore"   extends="struts-default" namespace="/"  >
+
+	
+	<action name="managerLogin" class="action.ManagerAction"   method="find">
+     	   <result name="success">/control.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    
+    <action name="bookAdd" class="action.BookAddAction"   method="save">
+    
+    <interceptor-ref name="fileUpload">   
+
+                            <!-- 配置允许上传的文件类型 -->   
+
+                   <param name="allowedTypes">   
+
+                      image/bmp,image/png,image/gif,image/jpeg,image/jpg,application/msword,text/plain   
+
+                   </param>   
+
+                            <!-- 配置允许上传的文件大小 -->   
+
+                   <param name="maximumSize">2000000000</param>   
+
+                 </interceptor-ref>   
+
+                 <interceptor-ref name="defaultStack" />   
+
+    
+    
+     	   <result name="success">/bookAdd.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+    
+     <action name="bookDelete" class="action.BookAction"   method="delete">
+     	   <result name="success">/control.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+    
+   
+    <action name="bookUpdate" class="action.BookUpdateAction"   method="update">
+     	   <result name="success">/control.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+  
+    
+    <action name="bookShow" class="action.BookSearchAction">
+     	   <result name="success">/bookShow.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+    
+  <!--     <action name="orderShow" class="action.OrderAction" method="show">
+     	   <result name="success">/control.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+   --> 
+   
+     <action name="orderShow" class="action.OrderAction" method="show">
+     	   <result name="success">/orderShow.jsp</result>
+       <result name="fail">/mess.jsp</result>
+    </action>
+     <action name="orderUpdate" class="action.OrderAction" method="update">
+     	   <result name="success">/orderShow.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+    
+    <action name="orderSearch" class="action.OrderSearchAction">
+     	   <result name="success">/orderSearch.jsp</result>
+	       <result name="fail">/mess.jsp</result>
+    </action>
+    
+    <action name="login" class="action.loginAction">
+     	   <result name="success">/index.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="delman" class="action.DelAction">
+     	   <result name="success">/message.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="addUser" class="action.addUserAction">
+     	   <result name="success">/message.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="allBook" class="action.allBookAction">
+     	   <result name="success">/allbook.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="book" class="action.BookAction">
+     	   <result name="success">/book.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="lookOrder" class="action.lookOrderAction">
+     	   <result name="success">/order.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="bookSearch" class="action.BookSearchAction">
+     	   <result name="success">/bookSearch.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="clearSearch" class="action.clearSearchAction">
+     	   <result name="success">/bookSearch.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="buy" class="action.buyAction">
+     	   <result name="success">/message.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+        <action name="updateUser" class="action.updateUserAction">
+     	   <result name="success">/message.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+
+    <action name="addToCart" class="action.addToCartAction">
+     	   <result name="success">/message.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="lookshoppingCart" class="action.lookShoppingCartAction">
+     	   <result name="success">/shoppingCart.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="deleteFromCart" class="action.deleteFromCartAction">
+     	   <result name="success">/shoppingCart.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    <action name="buyCart" class="action.buyCartAction">
+     	   <result name="success">/message.jsp</result>
+	       <result name="fail">/message.jsp</result>
+    </action>
+    
+    
+    
+   </package>
+
+</struts>    

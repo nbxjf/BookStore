@@ -1,0 +1,21 @@
+ /** Website template by freewebsitetemplates.com **/
+		#page .header .footer .body #sidebar .connect a{
+		  
+		  _margin: 10px 5px 0 5px;
+		  
+		}
+		
+
+/**----------------- Start Freatured Style  --------------------**/	
+	#page .header .footer .body #content .featured{
+	  
+	  _margin:-473px 0 30px 432px;
+	  
+	}		
+	
+	
+	#page .header .footer .body #content .featured  .body{
+	
+			_top:-88px;
+			
+		}

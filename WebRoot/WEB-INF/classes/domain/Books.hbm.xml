@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="domain">
+
+	<class name="Books">
+		<id name="isbn" type="java.lang.Integer">
+			<generator class="increment" ></generator>
+		</id>
+
+		<property name="bname"/>
+		<property name="author" />
+		<property name="press"/>
+		<property name="price" />
+		<property name="publicationDate"/>
+		<property name="picture" />
+		<property name="discription" />
+		<property name="cata" />
+	</class>
+
+</hibernate-mapping>
